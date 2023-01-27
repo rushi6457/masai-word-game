@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const UserSchema = new Schema({
     name:{type:String,required:true},
-    difficulty:{type:String,enum:['High',"Medium","Low"]},
+    difficulty:{type:String,enum:['High',"Medium","Low"],default:"Low"},
     score:{type:Number,default:0},
   },
   { timestamps: true }
