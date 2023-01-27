@@ -11,7 +11,10 @@ function GenerateRandomWord(req,res) {
   for (let i = 0; i < length; i++) {
     word += possible.charAt(Math.floor(Math.random() * possible.length));
   }
-res.send(word)
+  if(word.length =0){
+    res.send({"message":"Generate another word"})
+  }
+  res.send(word)
 }
 module.exports = {
     GenerateRandomWord
